@@ -1,0 +1,53 @@
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Bebas Neue", sans-serif;
+  color: #046582;
+}
+
+p{
+  font-size: 18px;
+}
+
+#sidebar{
+  background-color: #ccffbd;
+  background-image: linear-gradient(#ccffbd, #7eca9c);
+}
+
+#sidebar ul li a{color: #40394a; font-size: 21px;}
+#sidebar ul li a:hover {color: #fff; }
+#sidebar ul li.active > a {
+  background: transparent;
+  color: #c70000; }
+#sidebar ul li.active > a:hover {
+  background: transparent;
+  color: #810000; }
+
+#sidebar .custom-menu .btn.btn-primary {
+  background: #ccffbd;
+  border-color: #ccffbd; }
+
+#sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
+  background: #ccffbd;
+  border-color: #ccffbd; }
+
+
+.btn.btn-primary {
+    background: #ccffbd;
+    border-color: #ccffbd; }
+.btn.:hover, .btn.btn-primary:focus {
+    background: #ccffbd;
+    border-color: #ccffbds  ; }
+
+.btn-primary{
+  color: #000;
+}
+
+.btn-primary:hover{color:#3d3d3d}
+
+.bg-green{
+  background-color: #ccffbd;
+}
