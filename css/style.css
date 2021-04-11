@@ -1,6 +1,7 @@
 body {
   font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
+  background: #d9d9d9;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -18,7 +19,7 @@ p{
 }
 
 #sidebar ul li a{color: #40394a; font-size: 21px;}
-#sidebar ul li a:hover {color: #fff; }
+#sidebar ul li a:hover {color: #e62c48; }
 #sidebar ul li.active > a {
   background: transparent;
   color: #da0000; }
@@ -38,7 +39,7 @@ p{
 .btn.btn-primary {
     background: #da0000;
     border-color: #da0000; }
-.btn.:hover, .btn.btn-primary:focus {
+.btn:hover, .btn.btn-primary:focus {
     background: #da0000;
     border-color: #da0000  ; }
 
