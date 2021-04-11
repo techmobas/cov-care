@@ -103,9 +103,12 @@ session_start();
 
 					</div>
 
+	        <p>&nbsp;</p>
+          <p>&nbsp;</p>
 	        <div class="footer">
-
+            <p style="color:  #690514; font-size: 14px;">&copy; CoV-Care |  Your Number 1 Covid Health Solution. All Rights Reserved</p>
 	        </div>
+
 
 	      </div>
     	</nav>
@@ -202,7 +205,29 @@ session_start();
           </div>
           </h2>
       </div>
-          
+      
+      <div class="row" style="text-align: center;">
+          <div class = "col-lg-4">
+            <img src="image/man.png" alt="Flaticon" width="200px;">
+            <h2 style="color: black;"><span style="color: #da0000; font-size: 40px;">M</span>EMAKAI MASKER</h2>
+            <p>Use Face Mask</p>
+          </div>
+          <div class = "col-lg-4">
+            <img src="image/hand-wash.png" alt="Flaticon" width="200px;">
+            <h2 style="color: black;"><span style="color: #da0000; font-size: 40px;">M</span>ENCUCI TANGAN</h2>
+            <p>Wash your hands</p>
+          </div>
+          <div class = "col-lg-4">
+            <img src="image/social-distancing.png" alt="Flaticon" width="200px;">
+            <h2 style="color: black;"><span style="color: #da0000; font-size: 40px;">M</span>ENJAGA JARAK</h2>
+            <p>Keep your distance from others</p>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+      
       <?php
       if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){ ?>
 
