@@ -69,10 +69,10 @@ session_start();
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="#">COVID News</a>
+                    <a href="covid-news.php">COVID News</a>
                 </li>
                 <li>
-                    <a href="#">Vaccination News</a>
+                    <a href="vaccine-news.php">Vaccination News</a>
                 </li>
                 <li>
                     <a href="#">Symptom Checker</a>
