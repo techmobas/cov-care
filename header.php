@@ -19,8 +19,8 @@ session_start();
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/modified-bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -58,10 +58,8 @@ session_start();
 	        </button>
         </div>
 				<div class="p-4 pt-5">
-		  		<h1><a href="index.html" class="logo">Logo</a></h1>
+		  		<h1><a href="index.php" class="logo"><img src="image/logo.png" alt="CoV-Care" width="150px"></a></h1>
 	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
-	            <a href="#">CoV-Care</a>
 	          <li>
 	              <a href="index.php">Home</a>
 	          </li>
