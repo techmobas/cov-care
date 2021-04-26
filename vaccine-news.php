@@ -18,10 +18,12 @@
             ?>
               
               <div class="col-sm-12">
-              <iframe class="news" src="https://rss.app/embed/v1/wall/QxxrO0T8HlybTALu" frameBorder="0"></iframe>
+              <h4>detik.com</h4>
+              <rssapp-list id="eJeAEeX5ZQHAv3iz"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
               </div>
               <div class="col-sm-12">
-              <iframe class="news" src="https://rss.app/embed/v1/wall/TYlXq3BdmpcxPXyR" frameBorder="0"></iframe>
+              <h4>Kompas</h4>
+              <rssapp-list id="xIPJCWvqvH0KxZDH"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
               </div>
               
             </div>
