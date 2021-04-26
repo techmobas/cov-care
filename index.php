@@ -121,12 +121,12 @@
               
               <div class="col-sm-12">
               <h4>Detik.com</h3>
-              <iframe class="news" src="https://rss.app/embed/v1/wall/2yR0NgIrZV4tnymd" frameBorder="0"></iframe>
+              <rssapp-list id="ul6O5mobD947juRr"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
               </div>
 
               <div class="col-sm-12">
               <h4>Kompas</h3>
-              <iframe class="news" src="https://rss.app/embed/v1/wall/87uuEsfLsUYqSahO" frameBorder="0"></iframe>
+              <rssapp-list id="kcloGezdZ75Pryrf"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
               </div>
 
               <div class="col-sm-12">
