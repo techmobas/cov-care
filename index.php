@@ -131,7 +131,7 @@
 
               <div class="col-sm-12">
               <h4>International</h3>
-              <iframe class="news" src="https://rss.app/embed/v1/wall/RMCmX5NHmsTUFdQ7" frameBorder="0"></iframe>
+              <rssapp-wall id="9Y2vXYxQJaXxjRSq"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
               </div>
               
             </div>
