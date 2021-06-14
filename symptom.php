@@ -1,4 +1,6 @@
-<?php include "header.php" ?>
+<?php include "header.php" 
+
+?>
 
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -23,6 +25,10 @@
                 Dry Cough <br />
                 Tiredness <br />
               </div>
+
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+
               <div class="col-sm-12">
               <h2>Less Common Symptoms : </h2>
                 aches and pains<br />
@@ -33,6 +39,10 @@
                 loss of taste or smell<br />
                 a rash on skin, or discolouration of fingers or toes<br />
               </div>
+
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+
               <div class="col-sm-12">
               <h2>Serious Symptoms : </h2>
                 difficulty breathing or shortness of breath<br />

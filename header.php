@@ -2,7 +2,7 @@
 include "config.php";
 
 session_start();
-
+$result = mysqli_query($link, "SELECT vaccine FROM users");
 // if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 //     header("location: login.php");
 //     exit;
@@ -25,13 +25,15 @@ session_start();
 		<link rel="stylesheet" href="css/modified-bootstrap.css">
     <link rel="stylesheet" href="css/style.css" media="all" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  media="all" type="text/css"/>
-	  <link rel="icon" href="image/logo16" type="image/gif" sizes="16x16">
+	  <link rel="icon" href="image/logo16.png" type="image/gif" sizes="16x16">
     <style>
     body {
       font-family: "Bebas Neue", sans-serif;
       font-size: 24px;
       background: #fafafa;
     }
+
+    #flag{border: 1px solid black;}
 
     h1, h2, h3, h4, h5, h6{
       font-family: "Bebas Neue", sans-serif;
@@ -72,13 +74,23 @@ session_start();
     .btn.btn-primary {
         background: #da0000;
         border-color: #da0000;
-        color:#ffffff; }
+        color: #ffffff; }
     .btn:hover, .btn.btn-primary:focus {
         background: #da0000;
         border-color: #da0000; }
 
-    .btn-primary:hover{color:#ffffff}
-    .btn-primary:focus {color:#ffffff}
+    .btn-primary:focus {color:#ffffff;}
+
+    .btn.btn-secondary {
+        background: #da0000;
+        border-color: #da0000;
+        color: #ffffff; }
+    .btn:hover, .btn.btn-secondary:focus {
+      background: #6b0000;
+        border-color: #6b0000 }
+
+    .btn-secondary:focus {color:#ffffff;}
+
 
     .bg-green{
       background-color: #da0000;
@@ -120,14 +132,25 @@ session_start();
 
     </script>
   </head>
-
   
   <body>
-
+  <div class="modal hide fade" id="myModal">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Modal header</h3>
+    </div>
+    <div class="modal-body">
+        <p>One fine body…</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+    </div>
+</div>
 		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="custom-menu">
-					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+					<button type="button" id="sidebarCollapse" class="btn btn-secondary">
 	          <i class="fa fa-bars"></i>
 	          <span class="sr-only">Toggle Menu</span>
 	        </button>
@@ -139,16 +162,16 @@ session_start();
 	              <a href="index.php">Home</a>
 	          </li>
 	          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">COVID - 19</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="covid-news.php">COVID News</a>
+                    <a href="covid-news.php">COVID - 19 News</a>
                 </li>
                 <li>
                     <a href="vaccine-news.php">Vaccination News</a>
                 </li>
                 <li>
-                    <a href="#">Symptom Checker</a>
+                    <a href="symptom.php">Symptom Checker</a>
                 </li>
               </ul>
 	          </li>

@@ -1,11 +1,10 @@
 <?php 
-  include "header.php"
-  $result = mysqli_query($link, "SELECT vaccine FROM users");
+  include "header.php";
 ?>
         
     
         <div class="container text-center">
-          <h1 class="">Covid-19 Cases In <span id="city"></span> <br><img src="" alt="" id="flag" width="60px"></h1>
+          <h1 class="">Covid-19 Cases In <span id="city" style ="color: #000000;"></span> <br><img src="" alt="" id="flag" width="60px"></h1>
 
 
           <div class="row text-center">
@@ -122,7 +121,7 @@
                   <?php  
                   while ($row = mysqli_fetch_array($result)) {?>
                   <h1 class="mb-4">VACCINATION NEWS</h1>
-                  <p>Here's the news for <span style="color:#000000;"><?php echo $row['vaccine']?></span></p>                 
+                  <p>Here's the news for <span style="color:#000000; font-size:28px;"><?php echo $row['vaccine']?></span></p>                 
                 <?php 
                     if ($row['vaccine'] == "AstraZeneca"){
                       echo '<rssapp-magazine id="RRIeAguZFLeNDTL7"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>';
@@ -137,19 +136,22 @@
                 } 
                 
                 else { 
-                  
+                  ?>
+                <h3>Vaccine News only available for <a href="login.php">Member</a>.</h3>
+                  <?php
                 }?>
 
+                <p>&nbsp;</p>
+
                 <h1 class="mb-4">COVID-19 NEWS</h1>
-                <p>Your region is <span style="color:#000000;"></span></p>
 
               <div class="col-sm-12">
-              <h4></h4>
-              <!-- Sesuai Geolocation -->
+              <h4>Kompas</h4>
+              <rssapp-magazine id="SRoWU77cAKbE2hqo"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>
               </div>
             </div>
             </div>
-</div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -163,6 +165,7 @@
     },"json")
     
   </script>
+
 
   </body>
 </html>

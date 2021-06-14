@@ -1,4 +1,6 @@
-<?php include "header.php" ?>
+<?php 
+  include "header.php" 
+?>
 
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -8,28 +10,35 @@
             <?php
                 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){ ?>
 
-                <br><h4 class="mb-4">We got you covered, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h5>
-
-                <?php } else { ?>
-
-                <h1 class="mb-4">COVID-19 VACCINE NEWS</h1>
-            <?php
-            }
-            ?>
-              
-              <div class="col-sm-12">
-              <h4>detik.com</h4>
-              <rssapp-list id="eJeAEeX5ZQHAv3iz"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
-              </div>
-              <div class="col-sm-12">
-              <h4>Kompas</h4>
-              <rssapp-list id="xIPJCWvqvH0KxZDH"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
-              </div>
-              
+                <br><h4 class="mb-4">We got you covered, <span style="color:#000000;"><?php echo htmlspecialchars($_SESSION["username"]); ?>! 
+                    </span></h5>
+                
+                  
+                <?php  
+                  while ($row = mysqli_fetch_array($result)) {?>
+                  <h1 class="mb-4">VACCINATION NEWS</h1>
+                  <p>Here's the news for <span style="color:#000000; font-size:28px;"><?php echo $row['vaccine']?></span></p>                 
+                <?php 
+                    if ($row['vaccine'] == "AstraZeneca"){
+                      echo '<rssapp-magazine id="RRIeAguZFLeNDTL7"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>';
+                    }
+                    else if($row['vaccine'] == "Sinovac"){
+                      echo '<rssapp-magazine id="6IsSIItZflzMvQCR"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>';
+                    }
+                    else if($row['vaccine'] == "Pfizer"){
+                      echo '<rssapp-magazine id="VEFw7ugo2bIXLnhr"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>';
+                    }
+                  }
+                } 
+                
+                else { 
+                  ?>
+                    <h4>Vaccine News only available for <a href="login.php">Member</a>.</h4>
+                  <?php
+                }?>  
+            
             </div>
             </div>
-
-</div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>

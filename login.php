@@ -101,7 +101,90 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="image/logo16.png" type="image/gif" sizes="16x16">
+  <style>
+    body {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 24px;
+      background: #fafafa;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+      font-family: "Bebas Neue", sans-serif;
+      color: #da0000;
+    }
+
+    p{
+      font-size: 18px;
+    }
+
+    #sidebar{
+      background-color: #fff;
+      background-image: linear-gradient(#ffffff, #ffffff);
+    }
+
+    #sidebar ul li a{color: #40394a; font-size: 21px;}
+    #sidebar ul li a:hover {color: #e62c48; }
+    #sidebar ul li.active > a {
+      background: transparent;
+      color: #da0000; }
+    #sidebar ul li.active > a:hover {
+      background: transparent;
+      color: #810000; }
+
+    #sidebar .custom-menu .btn.btn-primary {
+      background: #ffffff;
+      border-color: #ffffff;
+    }
+
+    #sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
+      background: #da0000;
+      border-color: #da0000; 
+      color: #ffffff;
+    }
+
+    .btn.btn-primary {
+        background: #da0000;
+        border-color: #da0000;
+        color: #ffffff; 
+      }
+    .btn:hover, .btn.btn-primary:focus {
+        background: #da0000;
+        border-color: #da0000; }
+
+    .btn-primary:focus {color:#ffffff;}
+    
+    .btn.btn-secondary {
+        background: #da0000;
+        border-color: #da0000;
+        color: #ffffff; }
+    .btn:hover, .btn.btn-secondary:focus {
+      background: #6b0000;
+        border-color: #6b0000; }
+
+    .btn-secondary:focus {color:#ffffff;}
+
+    .bg-green{
+      background-color: #da0000;
+    }
+
+    .news {
+      width: 100%;
+      height: 900px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1023px){
+      .news {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      .news {
+        width: 100%;
+      }
+    }
+    </style>
 </head>
 <body>
   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
@@ -109,7 +192,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-5">
-            <img src="image/login.jpg" alt="login" class="login-card-img">
+            <img src="image/logins.jpg" alt="login" class="login-card-img">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -136,8 +219,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   </div>
                   <input type="submit" class="btn btn-block login-btn mb-4" value="Login">
                 </form>
-                <a href="#!" class="forgot-password-link">Forgot password?</a>
-                <p class="login-card-footer-text">Don't have an account? <a href="register.php" class="text-reset">Register here</a></p>
+                <a href="register.php" class="forgot-password-link">Sign Up</a>
+                <p class="login-card-footer-text"><a href="index.php" class="text-reset">Back</a></p>
                 <nav class="login-card-footer-nav">
                   <!-- Additional Cards -->
                 </nav>

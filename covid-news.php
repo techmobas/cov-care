@@ -1,4 +1,7 @@
-<?php include "header.php" ?>
+<?php include "header.php" 
+
+
+?>
 
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -15,23 +18,20 @@
                 <h1 class="mb-4">COVID-19 NEWS</h1>
             <?php
             }
-            ?>
-              
-              <div class="col-sm-12">
-              <h4>Detik.com</h4>
-              <rssapp-list id="ul6O5mobD947juRr"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
-              </div>
+            ?>              
 
               <div class="col-sm-12">
               <h4>Kompas</h4>
-              <rssapp-list id="kcloGezdZ75Pryrf"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
-              </div>
-
-              <div class="col-sm-12">
-              <h4>International</h4>
-              <rssapp-wall id="9Y2vXYxQJaXxjRSq"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+              <rssapp-magazine id="SRoWU77cAKbE2hqo"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>
               </div>
               
+              <p>&nbsp;</p>
+
+              <div class="col-sm-12">
+              <h4>Internasional</h4>
+              <rssapp-magazine id="Tigfb36YvPD5gXeo"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>
+              </div>
+
             </div>
             </div>
 
