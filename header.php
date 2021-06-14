@@ -64,7 +64,7 @@ session_start();
 	              <a href="index.php">Home</a>
 	          </li>
 	          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">MORE</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
                     <a href="covid-news.php">COVID News</a>
@@ -73,7 +73,7 @@ session_start();
                     <a href="vaccine-news.php">Vaccination News</a>
                 </li>
                 <li>
-                    <a href="#">Symptom Checker</a>
+                    <a href="symptom.php">General Symptom</a>
                 </li>
               </ul>
 	          </li>
