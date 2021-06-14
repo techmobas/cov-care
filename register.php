@@ -5,7 +5,8 @@ require_once "config.php";
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
- 
+
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
@@ -61,19 +62,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
     
+    $selectoption = $_POST["vaccineSelect"];
+
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO users (username, password, vaccine) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_password, $param_select);
             
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_select = $selectoption;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -114,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-5">
-            <img src="assets/images/login.jpg" alt="login" class="login-card-img">
+            <img src="image/regis.jpg" alt="login" class="login-card-img">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -137,6 +141,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group" >
+                <label style="font-size:18px">Please choose the type of Vaccine you wish to follow!</label>
+                <select name="vaccineSelect">
+                    <option value="Sinovac">Sinovac</option>
+                    <option value="AstraZeneca">AstraZeneca</option>
+                    <option value="Pfizer">Pfizer</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">

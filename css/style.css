@@ -1,7 +1,7 @@
 body {
   font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
-  background: #d9d9d9;
+  background: #fafafa;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -34,19 +34,19 @@ p{
 
 #sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
   background: #da0000;
-  border-color: #da0000; }
+  border-color: #da0000; 
+  color: #ffffff;
+}
+
 
 
 .btn.btn-primary {
     background: #da0000;
-    border-color: #da0000; }
+    border-color: #da0000;
+    color:#ffffff; }
 .btn:hover, .btn.btn-primary:focus {
     background: #da0000;
-    border-color: #da0000  ; }
-
-.btn-primary{
-  color: #da0000;
-}
+    border-color: #da0000; }
 
 .btn-primary:hover{color:#ffffff}
 .btn-primary:focus {color:#ffffff}

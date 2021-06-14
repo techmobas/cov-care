@@ -1,8 +1,8 @@
 <?php
-// Initialize the session
+include "config.php";
+
 session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
+
 // if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 //     header("location: login.php");
 //     exit;
@@ -21,11 +21,85 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  media="all" type="text/css"/>
 		<link rel="stylesheet" href="css/modified-bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" media="all" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  media="all" type="text/css"/>
+    <style>
+    body {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 24px;
+      background: #fafafa;
+    }
 
+    h1, h2, h3, h4, h5, h6{
+      font-family: "Bebas Neue", sans-serif;
+      color: #da0000;
+    }
+
+    p{
+      font-size: 18px;
+    }
+
+    #sidebar{
+      background-color: #fff;
+      background-image: linear-gradient(#ffffff, #ffffff);
+    }
+
+    #sidebar ul li a{color: #40394a; font-size: 21px;}
+    #sidebar ul li a:hover {color: #e62c48; }
+    #sidebar ul li.active > a {
+      background: transparent;
+      color: #da0000; }
+    #sidebar ul li.active > a:hover {
+      background: transparent;
+      color: #810000; }
+
+    #sidebar .custom-menu .btn.btn-primary {
+      background: #ffffff;
+      border-color: #ffffff;
+    }
+
+    #sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
+      background: #da0000;
+      border-color: #da0000; 
+      color: #ffffff;
+    }
+
+
+
+    .btn.btn-primary {
+        background: #da0000;
+        border-color: #da0000;
+        color:#ffffff; }
+    .btn:hover, .btn.btn-primary:focus {
+        background: #da0000;
+        border-color: #da0000; }
+
+    .btn-primary:hover{color:#ffffff}
+    .btn-primary:focus {color:#ffffff}
+
+    .bg-green{
+      background-color: #da0000;
+    }
+
+    .news {
+      width: 100%;
+      height: 900px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1023px){
+      .news {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      .news {
+        width: 100%;
+      }
+    }
+    </style>
     <script>
       fetch("https://corona.lmao.ninja/v2/countries/indonesia")
   .then((response) => {
@@ -64,7 +138,7 @@ session_start();
 	              <a href="index.php">Home</a>
 	          </li>
 	          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">MORE</a>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
                     <a href="covid-news.php">COVID News</a>
@@ -73,14 +147,14 @@ session_start();
                     <a href="vaccine-news.php">Vaccination News</a>
                 </li>
                 <li>
-                    <a href="symptom.php">General Symptom</a>
+                    <a href="#">Symptom Checker</a>
                 </li>
               </ul>
 	          </li>
             <?php
               if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){ ?>
             <li>
-              <a href="/logout.php">Log out</a>
+              <a href="logout.php">Log out</a>
             </li>
             <?php } else { ?>
 	          <li>
