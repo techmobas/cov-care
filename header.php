@@ -25,7 +25,7 @@ $result = mysqli_query($link, "SELECT vaccine FROM users");
 		<link rel="stylesheet" href="css/modified-bootstrap.css">
     <link rel="stylesheet" href="css/style.css" media="all" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  media="all" type="text/css"/>
-	  <link rel="icon" href="image/logo16.png" type="image/gif" sizes="16x16">
+	  <link rel="icon" href="image/logo16" type="image/gif" sizes="16x16">
     <style>
     body {
       font-family: "Bebas Neue", sans-serif;
@@ -129,24 +129,27 @@ $result = mysqli_query($link, "SELECT vaccine FROM users");
     document.getElementById("Recovered_Cases").innerHTML = data.recovered;
     document.getElementById("Total_Test_Done").innerHTML = data.tests;
   });
+    </script>
+
+  <script>
+      fetch("https://dekontaminasi.com/api/id/covid19/hospitals")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    document.getElementById("Nama_RS").innerHTML = data.name;
+    document.getElementById("Alamat_RS").innerHTML = data.address;
+    document.getElementById("Region_RS").innerHTML = data.region;
+    document.getElementById("Phone_RS").innerHTML = data.phone;
+    document.getElementById("Province_RS").innerHTML = data.province;
+  });
 
     </script>
   </head>
+
   
   <body>
-  <div class="modal hide fade" id="myModal">
-    <div class="modal-header">
-        <a class="close" data-dismiss="modal">×</a>
-        <h3>Modal header</h3>
-    </div>
-    <div class="modal-body">
-        <p>One fine body…</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#" class="btn">Close</a>
-        <a href="#" class="btn btn-primary">Save changes</a>
-    </div>
-</div>
 		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="custom-menu">
@@ -168,10 +171,10 @@ $result = mysqli_query($link, "SELECT vaccine FROM users");
                     <a href="covid-news.php">COVID - 19 News</a>
                 </li>
                 <li>
-                    <a href="vaccine-news.php">Vaccination News</a>
+                    <a href="vaccine-news.php">Vaccine News</a>
                 </li>
                 <li>
-                    <a href="symptom.php">Symptom Checker</a>
+                    <a href="symptom.php">General Symptom</a>
                 </li>
               </ul>
 	          </li>
@@ -188,11 +191,6 @@ $result = mysqli_query($link, "SELECT vaccine FROM users");
               <a href="register.php">Register</a>
             </li>
             <?php } ?>
-
-            
-	          <li>
-              <a href="#">FAQ</a>
-	          </li>
 	        </ul>
 
 	        <div class="mb-5">

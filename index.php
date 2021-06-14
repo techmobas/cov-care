@@ -1,13 +1,13 @@
 <?php 
   include "header.php";
 ?>
-        
     
         <div class="container text-center">
-          <h1 class="">Covid-19 Cases In <span id="city" style ="color: #000000;"></span> <br><img src="" alt="" id="flag" width="60px"></h1>
+          <h1 class="">Covid-19 Cases In <span id="country" style ="color: #000000;"></span> <br><img src="" alt="" id="flag" width="60px"></h1>
 
 
           <div class="row text-center">
+            
 
           <div class="col-md-2">
             <div class="card">
@@ -71,13 +71,20 @@
             </div>
           </div>
         </div>
-          </h2>
+      </div>
+
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+
+      <div class="container text-center">      
+      <h1 class="">You're located in <span id="city" style ="color: #000000;"></span> <br></h1>
+
       </div>
       
               <p>&nbsp;</p>
               <p>&nbsp;</p>
               
-
       <div class="container text-center">  
         <h1>REMEMBER <span style="font-size: 60px;">3M!</span></h1>
         <h4>Untuk Mencegah Penularan COVID-19</h4>
