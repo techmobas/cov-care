@@ -1,9 +1,10 @@
 <?php 
   include "header.php"
 ?>
-
+        
+    
         <div class="container text-center">
-          <h1 class="">Covid-19 Cases In <span id="country"></span> <br><img src="" alt="" id="flag" width="60px"></h1>
+          <h1 class="">Covid-19 Cases In <span id="city"></span> <br><img src="" alt="" id="flag" width="60px"></h1>
 
 
           <div class="row text-center">
@@ -142,5 +143,15 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    jQuery.get("https://ipapi.co/json", function(e){
+        console.log(e)
+        document.getElementById("city").innerHTML=e.city;
+    },"json")
+    
+  </script>
+
   </body>
 </html>
