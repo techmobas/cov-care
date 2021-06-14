@@ -1,5 +1,6 @@
 <?php 
   include "header.php"
+  $result = mysqli_query($link, "SELECT vaccine FROM users");
 ?>
         
     
@@ -108,37 +109,47 @@
           <div class="row text-center">
             <div class="col-sm-12">
             <?php
+
                 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){ ?>
+                
+                <br><h3 class="mb-4">Welcome, <span style="color:#000000;"><?php echo htmlspecialchars($_SESSION["username"]); ?>! 
+                    </span> &nbsp; We hope you styed safe during this pandemic.</h3> 
+                  <p>Here's the latest news for you.</p>
+                  
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
 
-                <br><h4 class="mb-4">Welcome, <?php echo htmlspecialchars($_SESSION["username"]); ?>! We hope you're staying safe during this pandemic. <br>
-                  Here's the latest news for you.</h5>
-
-                <?php } else { ?>
+                  <?php  
+                  while ($row = mysqli_fetch_array($result)) {?>
+                  <h1 class="mb-4">VACCINATION NEWS</h1>
+                  <p>Here's the news for <span style="color:#000000;"><?php echo $row['vaccine']?></span></p>                 
+                <?php 
+                    if ($row['vaccine'] == "AstraZeneca"){
+                      echo '<rssapp-magazine id="RRIeAguZFLeNDTL7"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>';
+                    }
+                    else if($row['vaccine'] == "Sinovac"){
+                      echo '<rssapp-magazine id="6IsSIItZflzMvQCR"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>';
+                    }
+                    else if($row['vaccine'] == "Pfizer"){
+                      echo '<rssapp-magazine id="VEFw7ugo2bIXLnhr"></rssapp-magazine><script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>';
+                    }
+                  }
+                } 
+                
+                else { 
+                  
+                }?>
 
                 <h1 class="mb-4">COVID-19 NEWS</h1>
-            <?php
-            }
-            ?>
-              
-              <div class="col-sm-12">
-              <h4>Detik.com</h3>
-              <rssapp-list id="ul6O5mobD947juRr"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
-              </div>
+                <p>Your region is <span style="color:#000000;"></span></p>
 
               <div class="col-sm-12">
-              <h4>Kompas</h3>
-              <rssapp-list id="kcloGezdZ75Pryrf"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
+              <h4></h4>
+              <!-- Sesuai Geolocation -->
               </div>
-
-              <div class="col-sm-12">
-              <h4>International</h3>
-              <rssapp-wall id="9Y2vXYxQJaXxjRSq"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
-              </div>
-              
             </div>
             </div>
-         
-    </div>
+</div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
