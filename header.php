@@ -25,6 +25,7 @@ session_start();
 		<link rel="stylesheet" href="css/modified-bootstrap.css">
     <link rel="stylesheet" href="css/style.css" media="all" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  media="all" type="text/css"/>
+	  <link rel="icon" href="image/logo16" type="image/gif" sizes="16x16">
     <style>
     body {
       font-family: "Bebas Neue", sans-serif;
